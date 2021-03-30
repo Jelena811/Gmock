@@ -1,0 +1,10 @@
+cc_library(
+    name="my_components",
+    hdrs=glob(
+        [
+            "Interface/DataBaseConnect.h",
+            "Interface/MyDataBase.h"
+        ]),
+    srcs=glob(["Src/MyDataBase.cpp"]),
+    visibility = ["//test:__pkg__"],
+)

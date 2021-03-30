@@ -1,0 +1,13 @@
+# Workspace file contains reference to external dependencies to build the output
+# Workspace rules are used to pull in external dependencies, typically source code located outside the main repository
+    # Bazel also embeds various Starlark workspace rules, in particular those to deal with git repositories or archives hosted on the web.
+
+#Bazel extensions are files ending in .bzl. Use the load statement to import a symbol from an extension.
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
+
+new_git_repository(
+    name = "googletest",
+    build_file = "@//:gmock.BUILD",
+    remote = "https://github.com/google/googletest",
+    tag = "release-1.10.0",
+)
