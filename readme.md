@@ -12,8 +12,11 @@
 This will also download gtest from its github repo and compile it
 
 1.	```bazel build ...```
-2.	Running your tests using GTest
-```bazel test ... --test_output=errors```
+2.	Running your tests using GTest  
+```bazel test ... --test_output=errors```  
+    OR  
+```cd test ```  
+    ```bazel run :my_test ```
 ***
 ## Primer GTEST_GMOCK_EXAMPLE
 ├───Components      
